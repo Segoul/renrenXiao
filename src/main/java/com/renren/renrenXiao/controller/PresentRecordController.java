@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiOperation;
 @Api
 @RestController
 @RequestMapping("/renren/presentRecord")
-public class PresentRecordController {
+public class PresentRecordController extends BaseController {
 
 	@Autowired
 	private PresentRecordService presentRecordService;
