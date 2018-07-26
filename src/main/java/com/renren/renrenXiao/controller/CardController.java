@@ -60,4 +60,11 @@ public class CardController extends BaseController {
 		
 		return ResultData.one(result);
 	}
+	
+	@ApiOperation(value = "顾客查看名片信息")
+    @RequestMapping(value = "/queryCardInfoByCustomer", method = RequestMethod.GET)
+	public ResultData queryCardInfoByCustomer(Integer cardId){
+		
+		return ResultData.one("");
+	}
 }
