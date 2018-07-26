@@ -6,9 +6,9 @@ public class CommonException extends RuntimeException {
 
     private static final long serialVersionUID = -7171148211322503748L;
 
-    private String            message;
+    private String message;
 
-    private String            code;
+    private String code;
 
     public CommonException() {
         super ();

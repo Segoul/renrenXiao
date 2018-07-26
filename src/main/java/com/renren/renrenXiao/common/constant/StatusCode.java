@@ -11,7 +11,9 @@ public enum StatusCode {
 	SUCCESS("000000", "操作成功"),
 	FAIL("900000","操作失败"),
 	INVALID_PARAM("900001","参数错误"),
-	SYS_ERROR("900002","系统未知错误");
+	SYS_ERROR("900002","系统未知错误"),
+	DATA_NOT_EXIST("900003", "要操作的数据不存在"),
+	DATA_BASE_OPERATE_FAIL("900004", "数据库操作失败");
 	
 	private String code;
 	private String message;
