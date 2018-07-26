@@ -106,4 +106,17 @@
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  
+  <!-- 根据用户ID查询提现记录（区分类别） -->
+  <select id="selectPresentRecordByUserId" resultMap="BaseResultMap">
+      select
+      <include refid="Base_Column_List" />
+      from present_record
+      where user_id = #{userId} 
+      <if test="type != null and type != ''" >
+      	and type = #{type} 
+      </if>
+      ORDER BY create_time DESC
+  </select>
+    
 </mapper>

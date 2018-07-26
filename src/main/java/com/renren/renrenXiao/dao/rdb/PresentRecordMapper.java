@@ -1,5 +1,9 @@
 package com.renren.renrenXiao.dao.rdb;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.renren.renrenXiao.bean.entity.rdb.PresentRecord;
 
 /**
@@ -21,4 +25,12 @@ public interface PresentRecordMapper {
     int updateByPrimaryKeySelective(PresentRecord record);
 
     int updateByPrimaryKey(PresentRecord record);
+    
+    /**
+     * 根据用户ID查询提现记录（区分类别）
+     * @param userId  用户ID
+     * @param type  类型
+     * @return
+     */
+    List<PresentRecord> selectPresentRecordByUserId(@Param("userId") Integer userId,@Param("type") Integer type);
 }
